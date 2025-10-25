@@ -31,7 +31,7 @@ const oidcConfig = {
   secret: process.env.SESSION_SECRET,
   baseURL: process.env.BASE_URL,
   clientID: process.env.AUTH0_CLIENT_ID,
-  issuerBaseURL: process.env.AUTH0_DOMAIN
+  issuerBaseURL: `https://${process.env.AUTH0_DOMAIN}`
 };
 
 app.use(auth(oidcConfig)); 
