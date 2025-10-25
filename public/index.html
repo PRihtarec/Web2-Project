@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loto 6/45</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #eee;
+      margin: 30px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    button,
+    a {
+      background: dodgerblue;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+
+    .card {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 15px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Loto 6/45</h1>
+    <div id="user-info">
+      <button id="login-btn" onclick="window.location='/login'">Prijava</button>
+      <button id="logout-btn" onclick="window.location='/logout'" style="display:none;">Odjava</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Trenutno kolo</h2>
+      <p id="round-info">Podatci o kolu</p>
+    </div>
+
+    <div class="card">
+      <h2>Broj uplaćenih listića</h2>
+      <p id="ticket-count">Broj</p>
+    </div>
+
+    <div class="card">
+      <h2>Izvučeni brojevi</h2>
+      <p id="drawn-numbers">Još nisu izvučeni.</p>
+    </div>
+
+    <div class="card" id="bet-section" style="display:none;">
+      <a href="/bet.html">Uplati listić</a>
+    </div>
+  </main>
+
+  <script src="/index.js"></script>
+
+</body>
+
+</html>
