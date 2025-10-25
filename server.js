@@ -29,9 +29,9 @@ const oidcConfig = {
   authRequired: false,
   auth0Logout: true,
   secret: process.env.SESSION_SECRET,
-  baseURL: 'http://localhost:3000',
+  baseURL: process.env.BASE_URL,
   clientID: process.env.AUTH0_CLIENT_ID,
-  issuerBaseURL: `https://${process.env.AUTH0_DOMAIN}`
+  issuerBaseURL: process.env.AUTH0_DOMAIN
 };
 
 app.use(auth(oidcConfig)); 
