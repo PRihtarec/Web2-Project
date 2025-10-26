@@ -135,7 +135,7 @@ app.post('/api/ticket', async (req, res) => {
     const ticketId = inserted.rows[0].id;
 
    
-    const ticketUrl = `${process.env.BASE_URL}/ticket/${ticketId}`;
+    const ticketUrl = `${process.env.BASE_URL}ticket/${ticketId}`;
     const qr = await QRCode.toBuffer(ticketUrl, { type: 'png' });
 
     res.set('Content-Type', 'image/png');
